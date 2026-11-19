@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1B3A57;
+  --color-primary-hover: #132B41;
+  --color-accent: #D9622B;
+  --color-bg: #F6F5F2;
+  --color-card: #FFFFFF;
+  --color-border: #E4E1DA;
+  --color-ink: #1F2933;
+  --color-muted: #6B7280;
+}
+
+body {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Simple skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #e8e6e1 25%, #f5f4f1 50%, #e8e6e1 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Score ring */
+.score-ring {
+  transition: stroke-dashoffset 0.8s ease;
+}
